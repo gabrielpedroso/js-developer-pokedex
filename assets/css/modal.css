@@ -1,0 +1,179 @@
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 300px;
+    max-width: 90%;
+}
+
+#fade, #modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade.hide,
+#modal.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background-color: #49D0D0;
+    border-radius: 24px;
+}
+
+.modal-content .header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 1rem;
+    margin-bottom: calc(150px - 32px);
+}
+
+.modal-content .header .arrow {
+    color: #FFFFFF; 
+    cursor: pointer;
+}
+
+.modal-content .header .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-content .header .info .main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-content .header .info .main .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.modal-content .header .info .main .types {
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.modal-content .header .info .main .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    background-color: #49D0D0;
+}
+
+.modal-content .header .info .number {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.modal-content .image {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content .image img {
+    position: absolute;
+    height: 150px;
+    margin: calc(-150px + 32px);
+}
+ 
+.modal-content .bottom {
+    padding: calc(150px - 118px + 16px) 16px 16px;
+    background-color: #FFFFFF;
+    border-radius: 24px;
+}
+
+.modal-content .bottom .about {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-content .bottom .about .title {
+    padding: 8px;
+    border-bottom: .5px solid;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.modal-content .bottom .about .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+}
+
+.modal-content .bottom .about .detail .container {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    font-size: 12px;
+}
+
+.modal-content .bottom .about .detail .container .name {
+    color: #B1B1B1;
+}
+
+.modal-content .bottom .breeding {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+}
+
+.modal-content .bottom .breeding .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modal-content .bottom .breeding .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-content .bottom .breeding .detail .container {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    font-size: 12px;
+}
+
+.modal-content .bottom .breeding .detail .container .name {
+    color: #B1B1B1;
+}
+
+.modal-content .bottom .breeding .detail .container .gender {
+    display: flex;
+    gap: 16px;
+}
+
+.modal-content .bottom .breeding .detail .container .gender .male {
+    color: blue;
+}
+
+.modal-content .bottom .breeding .detail .container .gender .female {
+    color: pink;
+}
